@@ -33,7 +33,12 @@ section {
 }
 
 .card-container {
-    height: 260px;
+    height: 270px;
+    padding: 1px;
+}
+
+.card-container .active {
+    border: 3px solid teal;    
 }
 
 .card-content {

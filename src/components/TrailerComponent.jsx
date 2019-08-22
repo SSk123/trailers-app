@@ -58,23 +58,23 @@ export function TrailerCard({movie, selectedMovie, ...rest}) {
         wtsCount:reviewCount,
         wtsPerc: reviewPercent
     } = movie;
-    
+    const selected = selectedMovie === movieId;
     return (
         <div className='card-wrap' {...rest} >
-            <div className='card-container'> 
+            <div className={`card-container ${selected ? 'active' : null}`}> 
                 <div className='card-content'
                     style={{'backgroundImage': `url('https://in.bmscdn.com/events/moviecard/${movieId}.jpg')`}} >
                 <ReleaseDate showDate={ShowDate} />
                 <div className='play-option'>
                     <i className="fa fa-play-circle-o play-icon" aria-hidden="true"></i>
-                    <div className='hover-title'>{title}</div>
+                    { !selected ? <div className='hover-title'>{title}</div> : null }
                 </div>
                 <Vote reviewCount={reviewCount} reviewPercent={reviewPercent} />
                 </div>
                 <MovieTitle title={title} />
             </div>
-            <div className={`video-space ${selectedMovie === movieId ? 'show' : ''}`}>
-                {selectedMovie === movieId ? <VideoCard movie={movie} /> : null}
+            <div className={`video-space ${selected ? 'show' : ''}`}>
+                {selected ? <VideoCard movie={movie} /> : null}
             </div>
         </div>
     )
