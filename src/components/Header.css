@@ -1,0 +1,88 @@
+.header-container {
+    background-color: #222;
+    text-align: left;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+button.static {
+    background: teal;
+    color: #fff;
+}
+
+.movie-title-container {
+    flex: 1;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+}
+
+.title {
+    flex: 1;
+    font-size: 18px;
+    font-family: cursive;
+}
+
+.movie-title-container button {
+    flex: 1;
+    padding: 0 5px;
+    height: 30px;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+.filter-container {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.filter-container .filter-component {
+    flex: 1;
+    display: flex;
+    max-width: 135px;
+    border: 1px solid teal;
+    color: white;
+    padding: 0 5px;
+    margin: 0 5px;
+    border-radius: 2px;
+    height: 30px;
+}
+
+.filter-component select {
+    color: teal;
+    height: 30px;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+.filter-component .mui-select__menu {
+    top: 30px !important;
+    left: 0;
+    background: rgba(34, 34, 34, 0.9);
+    max-height: 300px;
+    color: teal;
+}
+
+.filter-component:focus>select {
+    border-color: transparent;
+}
+
+.filter-component label {
+    display: none;
+    color: transparent !important;
+}
+
+.filter-component .mui-select__menu .mui--is-selected {
+    background: #222;
+    font-weight: 800;
+}
+.filter-component .mui-select__menu .filter-value {
+    padding: 0 5px;
+    color: teal;
+    font-size: 10px;
+}

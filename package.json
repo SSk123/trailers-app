@@ -1,0 +1,69 @@
+{
+  "name": "trailers",
+  "description": "create a react redux app to show trailers",
+  "version": "0.1.0",
+  "author": "srishti",
+  "dependencies": {
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
+    "bootstrap": "^4.3.1",
+    "muicss": "^0.9.43",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.11",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.0.1",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "express": "^4.17.1",
+    "husky": "^3.0.2",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "format": "prettier --write '**/*.{js,jsx,json,md}'",
+    "format:changed": "pretty-quick",
+    "format:staged": "pretty-quick --staged",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "lint": "eslint **/*.js --quiet",
+    "lint-fix": "eslint --fix",
+    "server": "node-env-run server --exec nodemon",
+    "dev": "run-p server start"
+  },
+  "proxy": "http://localhost:3001",
+  "husky": {
+    "hooks": {
+      "pre-commit": "format:staged"
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "engines": {
+    "npm": ">=4",
+    "node": ">=6"
+  }
+}
